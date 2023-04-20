@@ -1,12 +1,19 @@
 {
-  "name": "nodehttp",
+  "name": "devcamper",
   "version": "1.0.0",
-  "description": "",
+  "description": "devcamper backend api",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "NODE_ENV=production node server",
+    "dev": "nodemon server"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Sudeepta Das",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }

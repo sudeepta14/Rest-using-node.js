@@ -1,7 +1,17 @@
-var http = require("http");
-var server = http.createServer((request, response) => {
-  response.writeHead(200, { "Content-type": "text/plain" });
-  response.end("Hello World to you!");
-}); // <-----------
-server.listen(8000);
-console.log("Server running on port 8000");
+const express = require("express");
+const dotenv = require("dotenv");
+
+//load env vars
+
+dotenv.config({ path: "./config/config.env" });
+
+const app = express();
+
+const PORT = process.env.PORT;
+
+app.listen(
+  PORT,
+  console.log(
+    `server is running in ${process.env.NODE_ENV} mode on port ${PORT}`
+  )
+);
